@@ -6,9 +6,8 @@ import { withComponentInputBinding } from '@angular/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideFileRouter(),
+    provideFileRouter(withComponentInputBinding()),
     provideHttpClient(),
     provideClientHydration(),
-    withComponentInputBinding().ɵproviders, // workaround
   ],
 };
