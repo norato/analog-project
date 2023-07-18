@@ -1,3 +1,4 @@
+import { provideContent, withMarkdownRenderer } from '@analogjs/content';
 import { provideFileRouter } from '@analogjs/router';
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
@@ -9,5 +10,6 @@ export const appConfig: ApplicationConfig = {
     provideFileRouter(withComponentInputBinding()),
     provideHttpClient(),
     provideClientHydration(),
+    provideContent(withMarkdownRenderer()),
   ],
 };
